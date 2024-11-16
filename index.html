@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Resume Builder</title>
+    <title>Shareable Resume Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Dynamic Resume Builder</h1>
+        <h1>Shareable Resume Builder</h1>
         <form id="resume-form">
             <fieldset>
                 <legend>Personal Information</legend>
+                <label for="username">Resume URL</label>
+                <input type="text" id="username" name="username" placeholder="Enter unique resume URL" required/> <br>
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" placeholder="Your name" required>
 
@@ -25,19 +28,19 @@
             <fieldset>
                 <legend>Education</legend>
                 <label for="education">Education:</label>
-                <textarea id="education" placeholder="Your education" rows="3" required></textarea>
+                <textarea id="education" placeholder="Your education" rows="4" required></textarea>
             </fieldset>
 
             <fieldset>
                 <legend>Experience</legend>
                 <label for="experience">Experience:</label>
-                <textarea id="experience" placeholder="Your experience" rows="3" required></textarea>
+                <textarea id="experience" placeholder="Your experience" rows="4" required></textarea>
             </fieldset>
 
             <fieldset>
                 <legend>Skills</legend>
                 <label for="skills">Skills:</label>
-                <textarea id="skills" placeholder="Your skills" rows="3" required></textarea>
+                <textarea id="skills" placeholder="Your skills" rows="4" required></textarea>
             </fieldset>
 
             <button type="submit">Generate Resume</button>
@@ -50,5 +53,6 @@
     </div>
 
     <script src="new.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 </html>
